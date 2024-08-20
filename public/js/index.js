@@ -3,6 +3,11 @@
 import * as THREE from 'three';
 
 const scene = new THREE.Scene();
+// THREE.PerspectiveCamera(FOV, aspect ratio, close, far)
+// Rendering distance (d)
+// d<close - display none
+// close<d<far - display 
+// d>far - display none
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer();
@@ -23,4 +28,3 @@ function animate() {
 
 	renderer.render( scene, camera );
 }
-alert("Agora vai");
