@@ -1,4 +1,4 @@
-// Introdução ao three.js
+// Simulação de Mecânica dos Fluidos
 
 import * as THREE from 'three';
 
@@ -24,7 +24,6 @@ document.body.appendChild( renderer.domElement );
 
 
 // Make the objects
-const geometry = new THREE.BoxGeometry( 2, 2, 2 );
 const points = [];
 points.push(new THREE.Vector3(-10,0,0));
 points.push(new THREE.Vector3(0,10,1));
@@ -34,26 +33,19 @@ points.push(new THREE.Vector3(-10,0,0));
 const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
 
 // Make the materials
-const material = new THREE.MeshBasicMaterial( { color: 0xfaff4f } );
-//// Line materials are different
 const lineMat = new THREE.LineBasicMaterial({color: 0x0000ff});
 
 // Mesh the geometry with the material
-const cube = new THREE.Mesh( geometry, material );
 const line = new THREE.Line(lineGeo, lineMat);
 
 
 // Add the mesh to the scene
-scene.add(cube);
 scene.add(line);
 
 // Locate the camera
 //camera.position.z = 5;
 
 function animate() {
-	cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
-	cube.rotation.z += 0.01;
 	line.rotation.x += 0.02;
 	line.rotation.y += 0.02;
 	// On the animation, it's needed to render it various times
