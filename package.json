@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "webpack serve"
+    "serve": "npx vite serve public/"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,9 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.10",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "vite": "^5.4.2"
+  },
+  "dependencies": {
+    "three": "^0.167.1"
   }
 }
